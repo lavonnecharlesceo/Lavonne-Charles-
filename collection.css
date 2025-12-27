@@ -1,0 +1,51 @@
+/* ---------- Collection Page ---------- */
+.collection-page {
+  padding: 6rem 6%;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Main Collection Header */
+.collection-page h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;             /* light, elegant */
+  font-size: clamp(32px, 5vw, 56px); /* responsive, large but classy */
+  letter-spacing: 2px;          /* refined spacing */
+  color: black;               /* luxury gold accent */
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.15); /* subtle depth */
+}
+
+/* Optional subtitle below main header */
+.collection-page p {
+  font-size: 1rem;
+  color: #111111;               /* dark, classy */
+  max-width: 650px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.5;
+  font-weight: 300;             /* light, minimal */
+}
+
+/* Grid of sketches */
+.sketch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 3rem;
+  justify-items: center;        /* center images in columns */
+}
+
+/* Individual sketches */
+.sketch-grid img {
+  width: 100%;
+  max-width: 320px;             /* luxury card size */
+  border-radius: 8px;           /* rounded edges, minimal */
+  filter: brightness(0.98);     /* subtle soft look */
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.sketch-grid img:hover {
+  transform: scale(1.03);
+  filter: brightness(0.92);     /* elegant hover effect */
+}

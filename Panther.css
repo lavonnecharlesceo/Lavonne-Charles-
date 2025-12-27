@@ -1,0 +1,406 @@
+/* ---------- Base ---------- */
+:root{
+  --bg: #fff;            /* white background for luxury minimal */
+  --ink: #0b0b0b;        /* deep black */
+  --muted: #867f7b;      /* subtle neutral for accents */
+  --gap: 5.5rem;
+  --max-width: 1200px;
+  --luxury-gold: #C6A878; /* cool gold accent */
+}
+
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--ink);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* ---------- Header ---------- */
+.site-header{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:86px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 4.5%;
+  z-index:50;
+  background:transparent;
+  font-family: 'Playfair Display', serif; /* luxury serif */
+}
+
+.nav-left, .nav-right { 
+  display:flex; 
+  gap:28px; 
+  align-items:center; 
+}
+
+/* Shared nav link (already exists on your site) */
+.nav-link {
+  font-size: 0.85rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(0,0,0,0.85);
+  transition: color 0.3s ease;
+}
+
+/* Collection back link – softer */
+.back-link {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: rgba(0,0,0,0.55);
+}
+
+.back-link:hover {
+  color: rgba(0,0,0,0.9);
+}
+
+.brand-lockup {
+  position: relative;        
+  display: flex;
+  justify-content: center;   
+  align-items: center;
+  padding: 10px 0;           
+}
+
+.brand-logo {
+  width: 350px;      /* prominence */
+  max-width: 90%;    
+  height: auto;      
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.brand-logo:hover {
+  transform: scale(1.02);  /* subtle luxury hover */
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 4%;
+  position: relative;
+  overflow: hidden;
+  background: url("IMG_0783.jpg") center/cover no-repeat;
+  background-color:#f8f6f5; /* fallback tone */
+}
+
+/* subtle dark overlay for cinematic depth */
+.hero::after {
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.25); /* subtle dark overlay */
+  z-index:1;
+}
+
+.hero-content {
+  max-width:850px;
+  z-index:2;
+  color:white;
+}
+
+/* Hero Title */
+
+.hero-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;             /* light and elegant */
+  font-size: clamp(36px, 6vw, 72px);
+  letter-spacing: 3px;
+  line-height: 1.1;
+  color: white;               /* gold accent */
+  text-transform: uppercase;    /* keeps classy luxury style */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.25); /* subtle depth */
+}
+
+/* Hero Subtitle */
+.hero-sub {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #FFFFFF; /* white for readability */
+  margin-top: 16px;
+}
+
+/* Hero CTA */
+.hero-cta {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  color: #D4AF37; /* gold */
+  border-bottom: 1px solid #D4AF37;
+  padding-bottom: 2px;
+  text-decoration: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hero-cta:hover {
+  opacity: 0.7;
+  transform: translateY(-2px);
+}
+
+.hero-image {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.centered-image {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+/* ---------- Moodboard ---------- */
+
+.moodboard{
+  padding:5.5rem 6%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  text-align:center;
+}
+
+.mood-title{
+  font-family:"Playfair Display", serif;
+  font-size:1.75rem;
+  margin-bottom:6px;
+}
+
+.mood-sub{ 
+  color:var(--muted); 
+  margin-bottom:2.5rem; 
+} /* ← YOU FORGOT THIS BRACE */
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.mood-img{
+  width:100%;
+  aspect-ratio: 4 / 5;
+  object-fit:cover;
+  border-radius:6px;
+  transition: transform .45s ease, filter .45s ease;
+  filter:brightness(.98);
+}
+
+.mood-img:hover{ 
+  transform:scale(1.03); 
+  filter:brightness(.92); 
+}
+
+/* ---------- About ---------- */
+.about{
+  padding:3.5rem 6% 7rem;
+  text-align:center;
+}
+.about h3{ font-family:"Playfair Display", serif; font-size:1.1rem; margin-bottom:10px; text-transform:uppercase; letter-spacing:2px;}
+.about p{ color:var(--muted); max-width:720px; margin:0 auto; }
+
+.collection-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.collection-preview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  padding: 6rem 6%;
+  font-family: 'Playfair Display', serif;
+}
+
+/* the grid ITEM */
+.collection-link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* center third item */
+.collection-link.item3 {
+  grid-column: 1 / -1;   /* spans both columns */
+  justify-self: center;
+}
+
+/* visual card */
+.collection-item {
+  width: 100%;
+  max-width: 320px;
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient overlay for text readability */
+.collection-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(transparent, rgba(0,0,0,0.5));
+  border-radius: 0 0 8px 8px; 
+}
+
+/* Collection text overlay */
+.collection-item h2 {
+  color: white;
+  font-weight: 400;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Assign images correctly */
+.collection-link.item1 .collection-item {
+  background-image: url("IMG_1036.JPG");
+}
+
+.collection-link.item2 .collection-item {
+  background-image: url("IMG_1035.JPG");
+}
+
+.collection-link.item3 .collection-item {
+  background-image: url("IMG_1394.JPG");
+}
+
+/* Make the third item centered in a new row */
+.collection-item.item3 {
+  grid-column: 1 / -1;  /* spans both columns */
+  justify-self: center;  /* centers it below the first row */
+}
+
+/* Coming Soon Image - KEEP ORIGINAL */
+.coming-soon {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.coming-soon img {
+  max-width: 300px;  /* keeps your original styling */
+  width: 100%;
+  height: auto;
+}
+
+
+/* Newsletter section (minimal luxury) */
+.newsletter {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.newsletter h3 {
+  color: black;
+  font-weight: 300;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.newsletter input {
+  padding: 12px 18px;
+  width: 260px;
+  border: 1px solid #444;
+  background-color: transparent;
+  color: black;
+  outline: none;
+  border-radius: 6px; /* luxury feel */
+}
+
+.newsletter button {
+  padding: 12px 20px;
+  margin-left: 10px;
+  border: 1px solid white;
+  background: transparent;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 6px;
+}
+
+.newsletter button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* ---------- Footer (Luxury Minimal) ---------- */
+.site-footer {
+  border-top: 1px solid rgba(0,0,0,0.05); /* softer, less harsh */
+  padding: 3rem 6%;                        /* more breathing room */
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-family: 'Playfair Display', serif;  /* elegant serif font */
+  letter-spacing: 0.5px;
+  background-color: #fff;                  /* minimal clean background */
+}
+
+/* Optional subtle footer links */
+.site-footer a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 400;
+  margin: 0 8px;
+}
+
+.site-footer a:hover {
+  color: #000; /* subtle contrast on hover */
+}
+
+/* Optional soft shadow line instead of border */
+.site-footer::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 60px;                /* minimal horizontal line */
+  background: rgba(0,0,0,0.05);
+  margin: 0 auto 1.5rem auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 880px){
+  .site-header{ padding:0 4%; height:74px; }
+  .logo-svg{ width:48px; height:48px; }
+  .nav-left, .nav-right{ display:none; } /* minimal header on mobile */
+  .mood-grid{ grid-template-columns: repeat(3, 1fr); gap:18px; } /* keep 3 per row luxury */
+  .hero-sub{ letter-spacing:1.4px; }
+  
+  .site-footer {
+    padding: 2rem 4%;
+    font-size: 0.9rem;
+  }
+}

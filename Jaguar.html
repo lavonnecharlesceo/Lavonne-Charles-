@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>lavonne Charles</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="Panther.css">
+</head>
+<body>
+
+  <!-- Header (minimal) -->
+  <header class="site-header">
+    <nav class="nav-left">
+      <a class="nav-link" href="#collection">Collection</a>
+      <a class="nav-link" href="#atelier">Atelier</a>
+    </nav>
+
+    <div class="brand-lockup">
+  <img src="IMG_1418.PNG" alt="Brand Logo" class="brand-logo" />
+</div>
+
+      <div class="nav-right">
+      <a class="nav-link" href="#lookbook">Lookbook</a>
+    </div>
+
+    <div class="nav-right">
+      <a class="nav-link" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" id="home" role="banner" aria-label="Discover the collection">
+      <!-- static background image set in CSS -->
+      <div class="hero-content">
+  <h1 class="hero-title">Black Is Expensive.</h1>
+  <p class="hero-sub">Minimal. Dangerous. Luxurious.</p>
+  <a class="hero-cta" href="#collection">Discover the Collection</a>
+</div>
+</section>
+
+
+    <!-- Moodboard / Photothèque (after hero) -->
+   <section id="lookbook" class="moodboard">
+   <h2 class="mood-title">Photothèque</h2>
+   <p class="mood-sub">Visual references for inspiration only.</p>
+
+      <div class="mood-grid">
+        <img src="IMG_1036.JPG" alt="mood 1" class="mood-img">
+        <img src="IMG_1038.JPG" alt="mood 2" class="mood-img">
+        <img src="IMG_1034.JPG" alt="mood 3" class="mood-img">
+        <img src="IMG_1039.JPG" alt="mood 4" class="mood-img">
+        <img src="IMG_1040.JPG" alt="mood 5" class="mood-img">
+        <img src="IMG_1033.JPG" alt="mood 6" class="mood-img">
+        <img src="IMG_1035.JPG" alt="mood 7" class="mood-img">
+        <img src="IMG_1149.JPG" alt="mood 8" class="mood-img">
+        <img src="IMG_0844.JPG" alt="mood 9" class="mood-img">
+
+      </div>
+    </section>
+
+<!-- About / Intro Section -->
+<section id="about" class="about">
+  <h3>Lavonne Charles</h3>
+  <p>Crafted silhouettes and disciplined nature. Black-centred luxury, for one who moves like a force of nature.</p>
+</section>
+
+<!-- Collection Preview Section -->
+<section id="collection" class="collection-preview">
+  <a href="collection-shadow.html" class="collection-link item1">
+    <div class="collection-item">
+      <h2>COLLECTION I — SHADOW</h2>
+    </div>
+  </a>
+
+  <a href="collection-jaguar.html" class="collection-link item2">
+    <div class="collection-item">
+      <h2>COLLECTION II — JAGUAR</h2>
+    </div>
+  </a>
+
+  <a href="collection-noir.html" class="collection-link item3">
+    <div class="collection-item">
+      <h2>COLLECTION III — NOIR FEMME</h2>
+    </div>
+  </a>
+
+</section>
+
+<section id="atelier">
+  <div class="coming-soon">
+    <img src="Lavonne Charles.JPG" alt="Coming Soon">
+  </div>
+</section>
+
+
+<section id="contact" class="newsletter">
+  <h3>Stay Updated.</h3>
+  <form>
+    <input type="email" placeholder="Your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <small>© <span id="2026"></span> Lavonne Charles — All rights reserved.</small>
+      <nav class="foot-links">
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
